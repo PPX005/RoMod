@@ -48,7 +48,11 @@ Discord to Roblox remote moderation tool that utilizes roblox's cloud API. (Mess
 	```
 
 5. **Run the bot:**
+   Run: (to create the commands in your server)
     ```bash
     node deploy-commands.js
+    ```
+    And then run: (to start the bot)
+    ```bash
     node index.js
     ```
