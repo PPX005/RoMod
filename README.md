@@ -46,8 +46,9 @@ Discord to Roblox remote moderation tool that utilizes roblox's cloud API. (Mess
 	"OPENCLOUD_KEY": "your cloud api key https://create.roblox.com/dashboard/credentials"
 	}
 	```
-
-5. **Run the bot:**
+5. **Paste the `roblox/MSHandler.lua` contents into a **script** in `ServerScriptService` in the **same** game as your **config.json's universe id.** **
+ 
+6. **Run the bot:**
    Run: (to create the commands in your server)
     ```bash
     node deploy-commands.js
