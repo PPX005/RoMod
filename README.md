@@ -12,7 +12,6 @@ Discord to Roblox remote moderation tool that utilizes roblox's cloud API. (Mess
 - 🔧 Remote Kick
 - 🔧 Remote Ban / Tempban + Unban
 - 🔧 Ban checker
-- 🔧 Ban list
 
 ## ⚙️ Installation
 
@@ -57,3 +56,5 @@ Discord to Roblox remote moderation tool that utilizes roblox's cloud API. (Mess
     ```bash
     node index.js
     ```
+## Disclamer:
+This is the first version of the bot. There might be some issues and bugs which ill be happy to fix if asked politely. Discord: @ppx005
