@@ -36,9 +36,19 @@ Discord to Roblox remote moderation tool that utilizes roblox's cloud API. (Mess
     npm install
     ```
     
-4. **Fill in the `config.json` file:**
+4. **Fill in the `config.json` file**
+```JSON
+{
+	"token": "DISCORD TOKEN https://discord.com/developers/applications",
+	"clientId": "BOT'S ID",
+	"guildId": "GUILD ID where the bot is running (deployment purposes)",
+	"UNIVERSE_ID" : "your game's universe id (not the same as the place id) create.roblox.com",
+	"OPENCLOUD_KEY": "your cloud api key https://create.roblox.com/dashboard/credentials"
+}
+```
 
 5. **Run the bot:**
     ```bash
+    node deploy-commands.js
     node index.js
     ```
