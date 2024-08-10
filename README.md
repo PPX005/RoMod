@@ -19,7 +19,7 @@ Discord to Roblox remote moderation tool that utilizes roblox's cloud API. (Mess
 1. **Clone the repository:**
 
     ```bash
-    git clone https://github.com/yourusername/your-repository.git
+    git clone https://github.com/PPX005/RoMod.git
     ```
 
 2. **Navigate to the project directory:**
