@@ -16,7 +16,22 @@ Discord to Roblox remote moderation tool that utilizes roblox's cloud API. (Mess
 
 ## ⚙️ Installation
 
-```bash
-# Example for Node.js
-$ node --version
-$ npm --version
+1. **Clone the repository:**
+
+    ```bash
+    git clone https://github.com/yourusername/your-repository.git
+    ```
+
+2. **Navigate to the project directory:**
+
+    ```bash
+    cd your-repository
+    ```
+
+3. **Install dependencies:**
+
+    Run the following command to install all required dependencies listed in `package.json`:
+
+    ```bash
+    npm install
+    ```
