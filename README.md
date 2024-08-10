@@ -35,3 +35,10 @@ Discord to Roblox remote moderation tool that utilizes roblox's cloud API. (Mess
     ```bash
     npm install
     ```
+    
+4. **Fill in the `config.json` file:**
+
+5. **Run the bot:**
+    ```bash
+    node index.js
+    ```
