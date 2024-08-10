@@ -1,29 +1,59 @@
-# Project Name
+# RoMod
 
-![License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![Version](https://img.shields.io/badge/version-1.0.0-brightgreen.svg)
-![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)
 
 ## 📋 Information
 
-A brief description of your project. Explain what it does, why it exists, and any other key details. Include bullet points or a table for any specific highlights.
+Discord to Roblox remote moderation tool that utilizes roblox's cloud API. (MessagingService and Userrestrictions)
+
+- **Language**: Javascript (node.js) and Luau (roblox side).
 
 ### Features
-- ✨ Feature 1
-- 🚀 Feature 2
-- 🔧 Feature 3
-
-### Technology Stack
-- **Language/Framework**: List the primary technologies used.
-- **Other Dependencies**: Mention any key libraries or services.
+- 🔧 Remote Kick
+- 🔧 Remote Ban / Tempban + Unban
+- 🔧 Ban checker
+- 🔧 Ban list
 
 ## ⚙️ Installation
 
-### Prerequisites
+1. **Clone the repository:**
 
-- List any prerequisites needed to install or run the project (e.g., Python, Node.js, etc.).
+    ```bash
+    git clone https://github.com/PPX005/RoMod.git
+    ```
 
-```bash
-# Example for Node.js
-$ node --version
-$ npm --version
+2. **Navigate to the project directory:**
+
+    ```bash
+    cd your-path/RoMod
+    ```
+
+3. **Install dependencies:**
+
+    Run the following command to install all required dependencies listed in `package.json`:
+
+    ```bash
+    npm install
+    ```
+    
+4. **Fill in the `config.json` file**
+	```json
+	{
+	"token": "DISCORD TOKEN https://discord.com/developers/applications",
+	"clientId": "BOT'S ID",
+	"guildId": "GUILD ID where the bot is running (deployment purposes)",
+	"UNIVERSE_ID" : "your game's universe id (not the same as the place id) create.roblox.com",
+	"OPENCLOUD_KEY": "your cloud api key https://create.roblox.com/dashboard/credentials"
+	}
+	```
+5. **Paste the `roblox/MSHandler.lua` contents into a **script** in `ServerScriptService` in the game you wish to remotely moderate (Roblox Studio)**
+ 
+6. **Run the bot:**
+   Run: (to create the commands in your server)
+    ```bash
+    node deploy-commands.js
+    ```
+    And then run: (to start the bot)
+    ```bash
+    node index.js
+    ```
