@@ -57,4 +57,4 @@ Discord to Roblox remote moderation tool that utilizes roblox's cloud API. (Mess
     node index.js
     ```
 ## Disclamer:
-This is the first version of the bot. There might be some issues and bugs which ill be happy to fix if asked politely. Discord: @ppx005
+This is the first version of the bot. There will progressively be updates and new features will be added. There might be some issues and bugs which ill be happy to fix if asked politely. Discord: @ppx005
