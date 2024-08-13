@@ -1,7 +1,6 @@
 # RoMod
 
 ![Version](https://img.shields.io/badge/version-1.0.0-brightgreen.svg)
-[![Github All Releases](https://img.shields.io/github/downloads/PPX005/RoMod/total.svg)]()
 ## 📋 Information
 
 Discord to Roblox remote moderation tool that utilizes roblox's cloud API. (MessagingService and Userrestrictions) 
