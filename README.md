@@ -4,7 +4,7 @@
 [![Github All Releases](https://img.shields.io/github/downloads/PPX005/RoMod/total.svg)]()
 ## 📋 Information
 
-Discord to Roblox remote moderation tool that utilizes roblox's cloud API. (MessagingService and Userrestrictions)
+Discord to Roblox remote moderation tool that utilizes roblox's cloud API. (MessagingService and Userrestrictions) 
 
 - **Language**: Javascript (node.js) and Luau (roblox side).
 
