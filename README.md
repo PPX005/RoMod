@@ -61,6 +61,7 @@ This is the first version of the bot. There will progressively be updates and ne
 ## How to configure the roblox opencloud key:
 Make sure these permissions are enabled for the desired game:
 
-![image](https://github.com/user-attachments/assets/9e508936-2572-4b46-b446-7f90273e3455)
+![image](https://github.com/user-attachments/assets/d52db85f-6b6e-4846-8b13-e253d8d5049a)
+
 
 
