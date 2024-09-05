@@ -3,21 +3,21 @@ const messageSend = require('../../cloudmodules/cloud-api-ms.js');
 
 module.exports = {
 	data: new SlashCommandBuilder()
-		.setName('chat')
+		.setName('message')
 		.setDescription('Send a message to live chat ingame')
 		.addStringOption(option => 
 			option.setName('message')
 				.setDescription('Message content')
 				.setRequired(true))
-		.addBooleanOption(option => 
-			option.setName('private')
-				.setDescription('Display author name')),
+		.addIntegerOption(option => 
+			option.setName('userid')
+				.setDescription('Private message a user via their UserID | Leave blank to send a public message')),
 	async execute(interaction) {
 		const message = interaction.options.getString('message');
-		const private = interaction.options.getBoolean('private');
-        const author = interaction.user.username;
+		const userId = interaction.options.getInteger('userid');
+        const author = interaction.member ? interaction.member.displayName : interaction.user.username;
 
-		const content = JSON.stringify({'Message' : message, 'Private' :private, 'Author' : author})
+		const content = JSON.stringify({'Message' : message, 'UserId' : userId, 'Author' : author})
 
 		try {
 			const stausCode = await messageSend(content,"MessageSignal",interaction);
@@ -27,7 +27,7 @@ module.exports = {
 				.addFields(
 					{
 					name: "Message sent by:",
-					value: "```"+ `${author.username}` + ' | Discord ID:' + ` ${author.id}` +"```",
+					value: "```"+ `${author}` + "```",
 					inline: false
 					},
 				)
