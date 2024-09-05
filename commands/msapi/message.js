@@ -3,36 +3,31 @@ const messageSend = require('../../cloudmodules/cloud-api-ms.js');
 
 module.exports = {
 	data: new SlashCommandBuilder()
-		.setName('kick')
-		.setDescription('Kicks a roblox ID.')
-		.addIntegerOption(option => 
-			option.setName('userid')
-				.setDescription('Target roblox user id.')
-				.setRequired(true))
+		.setName('chat')
+		.setDescription('Send a message to live chat ingame')
 		.addStringOption(option => 
-			option.setName('reason')
-				.setDescription('Reason for the kick.')),
+			option.setName('message')
+				.setDescription('Message content')
+				.setRequired(true))
+		.addBooleanOption(option => 
+			option.setName('private')
+				.setDescription('Display author name')),
 	async execute(interaction) {
-		const userId = interaction.options.getInteger('userid');
-		const reason = interaction.options.getString('reason') ?? 'No reason provided.';
+		const message = interaction.options.getString('message');
+		const private = interaction.options.getBoolean('private');
         const author = interaction.user.username;
 
-		const content = JSON.stringify({'UserID' : userId, 'Reason' : reason, 'Author' : author})
+		const content = JSON.stringify({'Message' : message, 'Private' :private, 'Author' : author})
 
 		try {
-			const stausCode = await messageSend(content,"KickSignal",interaction);
+			const stausCode = await messageSend(content,"MessageSignal",interaction);
 			if (stausCode === 200) {
 				const embed = new EmbedBuilder()
-				.setTitle(`ID: ${userId} has successfuly been kicked.`)
+				.setTitle(`Message has been successfully sent!`)
 				.addFields(
 					{
-					name: "Kicked by:",
+					name: "Message sent by:",
 					value: "```"+ `${author.username}` + ' | Discord ID:' + ` ${author.id}` +"```",
-					inline: false
-					},
-					{
-					name: "Reason:",
-					value: "```"+ 'Kicked for: ' +`${reason}` + "```",
 					inline: false
 					},
 				)
@@ -49,7 +44,7 @@ module.exports = {
 					ephemeral = true
 				)
 			} else {
-				await interaction.reply(`There was a problem while kicking this user. Code: ${stausCode}`, ephemeral=true)
+				await interaction.reply(`There was a problem while sending a message to the chat. Code: ${stausCode}`, ephemeral=true)
 			}
 		} catch (error) {
 			console.error(error);
