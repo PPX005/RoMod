@@ -11,6 +11,7 @@ Discord to Roblox remote moderation tool that utilizes roblox's cloud API. (Mess
 - 🔧 Remote Kick
 - 🔧 Remote Ban / Tempban + Unban
 - 🔧 Ban checker
+- 🔧 Remote Chat Messaging
 
 ## ⚙️ Installation
 
@@ -44,7 +45,8 @@ Discord to Roblox remote moderation tool that utilizes roblox's cloud API. (Mess
 	"OPENCLOUD_KEY": "your cloud api key https://create.roblox.com/dashboard/credentials"
 	}
 	```
-5. **Paste the `roblox/MSHandler.lua` contents into a **script** in `ServerScriptService` in the game you wish to remotely moderate (Roblox Studio)**
+5. **Paste the `roblox/ServerScriptService/RoMod` folder into  `ServerScriptService` and the 'roblox/StarterPlayer/StarterPlayerScripts/ChatHandlerClient.lua' file into 'StarterPlayerScripts' in the game you wish to remotely moderate (Roblox Studio)**
+
  
 6. **Run the bot:**
    Run: (to create the commands in your server)
