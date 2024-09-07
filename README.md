@@ -60,7 +60,11 @@ Discord to Roblox remote moderation tool that utilizes roblox's cloud API. (Mess
 Make sure these permissions are enabled for the desired game:
 
 ![image](https://github.com/user-attachments/assets/d52db85f-6b6e-4846-8b13-e253d8d5049a)
-    
+
+## Demonstration:
+
+[![Video Title](https://img.youtube.com/vi/VIDEO_ID/0.jpg)](https://youtu.be/MYVkqKgUPn0)
+
 ## Disclamer:
 This is the first version of the bot. There will progressively be updates and new features will be added. There might be some issues and bugs which ill be happy to fix if asked politely. Discord: @ppx005
 
