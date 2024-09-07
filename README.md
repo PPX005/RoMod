@@ -37,12 +37,12 @@ Discord to Roblox remote moderation tool that utilizes roblox's cloud API. (Mess
 4. **Fill in the `config.json` file**
 	```json
 	{
-	"token": "", // DISCORD TOKEN https://discord.com/developers/applications
-	"clientId": "", // BOT'S ID
-	"guildId": "", // GUILD ID where the bot is running (deployment purposes)
-	"UNIVERSE_ID" : "", // your game's universe id (not the same as the place id) create.roblox.com
-	"OPENCLOUD_KEY": "", // your cloud api key https://create.roblox.com/dashboard/credentials
- 	"roleId" : "" // Role ID of the role that will enable users to execute commands
+	"token": "DISCORD TOKEN https://discord.com/developers/applications",
+	"clientId": "Bot's client id",
+	"guildId": "Guild (id) where the bot is running (deployment purposes)",
+	"UNIVERSE_ID" : "your game's universe id (not the same as the place id) create.roblox.com",
+	"OPENCLOUD_KEY": "your cloud api key https://create.roblox.com/dashboard/credentials",
+ 	"roleId" : "Role ID of the role that will enable users to execute commands"
 	}
 	```
 5. **Paste the `roblox/MSHandler.lua` contents into a **script** in `ServerScriptService` in the game you wish to remotely moderate (Roblox Studio)**
