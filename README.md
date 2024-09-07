@@ -1,10 +1,9 @@
 # RoMod
 
 ![Version](https://img.shields.io/badge/version-1.0.0-brightgreen.svg)
-
 ## 📋 Information
 
-Discord to Roblox remote moderation tool that utilizes roblox's cloud API. (MessagingService and Userrestrictions)
+Discord to Roblox remote moderation tool that utilizes roblox's cloud API. (MessagingService and Userrestrictions) 
 
 - **Language**: Javascript (node.js) and Luau (roblox side).
 
@@ -12,7 +11,6 @@ Discord to Roblox remote moderation tool that utilizes roblox's cloud API. (Mess
 - 🔧 Remote Kick
 - 🔧 Remote Ban / Tempban + Unban
 - 🔧 Ban checker
-- 🔧 Ban list
 
 ## ⚙️ Installation
 
@@ -57,3 +55,15 @@ Discord to Roblox remote moderation tool that utilizes roblox's cloud API. (Mess
     ```bash
     node index.js
     ```
+## How to configure the roblox opencloud key:
+Make sure these permissions are enabled for the desired game:
+
+![image](https://github.com/user-attachments/assets/d52db85f-6b6e-4846-8b13-e253d8d5049a)
+    
+## Disclamer:
+This is the first version of the bot. There will progressively be updates and new features will be added. There might be some issues and bugs which ill be happy to fix if asked politely. Discord: @ppx005
+
+
+
+
+
