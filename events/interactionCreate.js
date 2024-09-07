@@ -1,4 +1,5 @@
 const { Events, Collection } = require('discord.js');
+const { roleId } = require("../config.json");
 
 module.exports = {
 	name: Events.InteractionCreate,
@@ -36,7 +37,9 @@ module.exports = {
 		setTimeout(() => timestamps.delete(interaction.user.id), cooldownAmount);
 
 		try {
-			await command.execute(interaction);
+			if (interaction.member.roles.cache.has(roleId)) {
+				await command.execute(interaction);
+			}
 		}
 		catch (error) {
 			console.error(error);

@@ -3,5 +3,6 @@
 	"clientId": "",
 	"guildId": "",
 	"UNIVERSE_ID" : "",
-	"OPENCLOUD_KEY": ""
+	"OPENCLOUD_KEY": "",
+	"roleId" : ""
 }
