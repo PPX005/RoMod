@@ -63,7 +63,7 @@ Make sure these permissions are enabled for the desired game:
 
 ## Demonstration:
 
-[![Video Title](https://img.youtube.com/vi/VIDEO_ID/0.jpg)](https://youtu.be/MYVkqKgUPn0)
+[![Discord to Roblox Bot](https://cdn.discordapp.com/attachments/744459730910445690/1281940138682880023/image.png?ex=66dd8b4a&is=66dc39ca&hm=27459f343cb11413dc1d4a2c3d4f1efcb4f3ccada205579747f1a92ce9a9e8b9&)](https://youtu.be/MYVkqKgUPn0)
 
 ## Disclamer:
 This is the first version of the bot. There will progressively be updates and new features will be added. There might be some issues and bugs which ill be happy to fix if asked politely. Discord: @ppx005
