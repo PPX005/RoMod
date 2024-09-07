@@ -3,36 +3,31 @@ const messageSend = require('../../cloudmodules/cloud-api-ms.js');
 
 module.exports = {
 	data: new SlashCommandBuilder()
-		.setName('kick')
-		.setDescription('Kicks a roblox ID.')
+		.setName('message')
+		.setDescription('Send a message to live chat ingame')
+		.addStringOption(option => 
+			option.setName('message')
+				.setDescription('Message content')
+				.setRequired(true))
 		.addIntegerOption(option => 
 			option.setName('userid')
-				.setDescription('Target roblox user id.')
-				.setRequired(true))
-		.addStringOption(option => 
-			option.setName('reason')
-				.setDescription('Reason for the kick.')),
+				.setDescription('Private message a user via their UserID | Leave blank to send a public message')),
 	async execute(interaction) {
+		const message = interaction.options.getString('message');
 		const userId = interaction.options.getInteger('userid');
-		const reason = interaction.options.getString('reason') ?? 'No reason provided.';
-        const author = interaction.user.username;
+        const author = interaction.member ? interaction.member.displayName : interaction.user.username;
 
-		const content = JSON.stringify({'UserID' : userId, 'Reason' : reason, 'Author' : author})
+		const content = JSON.stringify({'Message' : message, 'UserId' : userId, 'Author' : author})
 
 		try {
-			const stausCode = await messageSend(content,"KickSignal",interaction);
+			const stausCode = await messageSend(content,"MessageSignal",interaction);
 			if (stausCode === 200) {
 				const embed = new EmbedBuilder()
-				.setTitle(`ID: ${userId} has successfuly been kicked.`)
+				.setTitle(`Message has been successfully sent!`)
 				.addFields(
 					{
-					name: "Kicked by:",
-					value: "```"+ `${author.username}` + ' | Discord ID:' + ` ${author.id}` +"```",
-					inline: false
-					},
-					{
-					name: "Reason:",
-					value: "```"+ 'Kicked for: ' +`${reason}` + "```",
+					name: "Message sent by:",
+					value: "```"+ `${author}` + "```",
 					inline: false
 					},
 				)
@@ -49,7 +44,7 @@ module.exports = {
 					ephemeral = true
 				)
 			} else {
-				await interaction.reply(`There was a problem while kicking this user. Code: ${stausCode}`, ephemeral=true)
+				await interaction.reply(`There was a problem while sending a message to the chat. Code: ${stausCode}`, ephemeral=true)
 			}
 		} catch (error) {
 			console.error(error);
